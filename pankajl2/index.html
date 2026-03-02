@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Market Learning Community</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '727721193367953');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=727721193367953&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins;
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+.logo{
+text-align:center;
+padding:20px 10px;
+}
+
+.logo img{
+width:80px;
+border-radius:50%;
+box-shadow:0px 0px 15px #00ffae;
+}
+
+.logo h2{
+margin-top:8px;
+font-weight:700;
+}
+
+.btn{
+display:block;
+width:92%;
+max-width:360px;
+margin:14px auto;
+padding:16px;
+font-size:18px;
+background:linear-gradient(45deg,#00ffae,#00c3ff);
+color:black;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+box-shadow:0px 6px 20px rgba(0,255,174,0.6);
+}
+
+.container{
+text-align:center;
+padding:15px;
+}
+
+h1{
+font-size:28px;
+margin-top:5px;
+}
+
+p{
+font-size:16px;
+opacity:0.95;
+line-height:24px;
+}
+
+.users{
+margin-top:10px;
+font-size:16px;
+color:#00ffae;
+font-weight:600;
+}
+
+.timer{
+font-size:26px;
+margin-top:15px;
+color:#00ffae;
+font-weight:700;
+}
+
+.popup{
+position:fixed;
+bottom:20px;
+left:15px;
+background:black;
+padding:10px 15px;
+border-radius:10px;
+font-size:13px;
+box-shadow:0px 0px 10px #00ffae;
+display:none;
+}
+
+.disclaimer{
+margin-top:30px;
+font-size:12px;
+line-height:18px;
+opacity:0.75;
+background:rgba(255,255,255,0.05);
+padding:15px;
+border-radius:10px;
+}
+
+.agency{
+margin-top:30px;
+text-align:center;
+font-size:13px;
+opacity:0.9;
+}
+
+.agency a{
+color:#00ffae;
+text-decoration:none;
+font-weight:600;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<div class="logo">
+
+<img src="https://github.com/mediasnapcricket-lgtm/pankaj-imges/releases/download/pankaj/pankajj.jpg">
+
+<h2>
+PANKAJ BHARDWAJ</h2>
+
+<a href="https://t.me/+Z5F2T7mI0484Nzk1" class="btn">
+JOIN FREE COMMUNITY
+</a>
+
+</div>
+
+
+
+
+<div class="container">
+
+<h1>Free Stock Market Learning</h1>
+
+<p>
+
+This community is created for educational purposes only.
+
+Members receive general learning material about stock market basics,
+price charts and market understanding.
+
+The goal is to help beginners understand how financial markets work.
+
+</p>
+
+
+<div class="users">
+
+📚 Many learners are already part of the community
+
+</div>
+
+
+
+<a href="https://t.me/+Z5F2T7mI0484Nzk1" class="btn">
+
+JOIN & START LEARNING
+
+</a>
+
+
+
+
+<div class="timer">
+
+Redirecting in <span id="count">20</span>s
+
+</div>
+
+
+
+
+<div class="disclaimer">
+
+⚠️ Disclaimer:<br><br>
+
+This page is designed only for educational and informational purposes.
+
+The content shared in the community is general learning material
+about financial markets.
+
+No investment advice, trading tips or profit guarantees are provided.
+
+Financial markets involve risk and may not be suitable for everyone.
+
+Users should conduct their own research before making financial decisions.
+
+This page is independent and not affiliated with any financial company.
+
+</div>
+
+
+
+<div class="agency">
+
+✨ Ad setup <a href="https://t.me/+V10sicQraClkMDc9">@Mahadevmarketing – Grow your business 🚀</a>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="popup" id="popup">
+
+Someone joined the learning community
+
+</div>
+
+
+
+
+
+<script>
+
+
+/* TIMER AUTO REDIRECT */
+
+var time=60;
+
+var x=setInterval(function(){
+
+time--;
+
+document.getElementById("count").innerHTML=time;
+
+if(time<=0){
+
+clearInterval(x);
+
+window.location="https://t.me/+V10sicQraClkMDc9";
+
+}
+
+},1000);
+
+
+
+
+/* Fake Join Popup */
+
+var names=["Rahul","Amit","Ravi","Suresh","Imran","Vikas","Arjun"];
+
+setInterval(function(){
+
+var name=names[Math.floor(Math.random()*names.length)];
+
+document.getElementById("popup").innerHTML=
+name+" joined the community";
+
+document.getElementById("popup").style.display="block";
+
+setTimeout(function(){
+
+document.getElementById("popup").style.display="none";
+
+},3000);
+
+},6000);
+
+
+
+</script>
+
+
+
+</body>
+</html>
