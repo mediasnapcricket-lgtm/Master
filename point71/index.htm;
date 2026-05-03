@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Learning Hub</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: #fff;
+    }
+
+    .wrapper {
+      max-width: 430px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .box {
+      background: #111827;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #22c55e;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .sub {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      background: #22c55e;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 12px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      display: block;
+      background: linear-gradient(90deg,#22c55e,#4ade80);
+      padding: 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .content {
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .content li {
+      margin: 8px 0;
+    }
+
+    .highlight {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .footer {
+      font-size: 11px;
+      opacity: 0.6;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+
+  </style>
+
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1144722174469925');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1144722174469925&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="box">
+
+    <img src="https://github.com/nafesslaptop-web/tamil/releases/download/tamil/3.p.jpg" class="logo">
+
+    <h1>📊 3 POINT TRADER</h1>
+    <div class="sub">Stock Market Basics Tamil + English la easy ah kathukonga 📚</div>
+
+    <div class="badge">🔥 Beginner Friendly</div>
+
+    <a href="https://t.me/+RGVaXOpSn_o0ODdl" class="cta">
+      🚀 Join Free Telegram Channel
+    </a>
+
+    <div class="highlight">
+      Neenga stock market kathuka aasaiya? 🤔  
+      Free Telegram la join pannunga & simple ah purinjukonga 📈
+    </div>
+
+    <ul class="content">
+      <li>📘 Basic → Advanced Learning</li>
+      <li>📊 Chart Reading Intro</li>
+      <li>🔥 Real Market Examples</li>
+      <li>⚡ Daily Educational Updates</li>
+      <li>💡 Easy Explanation (No Confusion)</li>
+    </ul>
+
+    <div class="footer">
+      Disclaimer: Idhu educational purpose mattum. Investment advice illa.  
+      Market risk irukku, invest panna munadi unga research pannunga.
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
