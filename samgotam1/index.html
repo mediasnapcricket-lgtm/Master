@@ -25,7 +25,7 @@
 
 html,body{
     width:100%;
-    height:100%;
+    min-height:100%;
 }
 
 body{
@@ -40,17 +40,12 @@ body{
     justify-content:center;
     align-items:center;
 
-    overflow:hidden;
-
     padding:10px;
 
     color:var(--text);
 }
 
-/* MAIN CARD */
-
 .container{
-
     width:100%;
     max-width:340px;
 
@@ -64,19 +59,14 @@ body{
 
     box-shadow:
     0 0 20px rgba(0,255,183,.12);
-
 }
 
 .top{
-
     padding:16px 14px 10px;
-
     text-align:center;
-
 }
 
 .badge{
-
     display:inline-block;
 
     padding:6px 12px;
@@ -93,11 +83,9 @@ body{
     font-weight:800;
 
     margin-bottom:10px;
-
 }
 
 .logo{
-
     width:68px;
     height:68px;
 
@@ -110,25 +98,18 @@ body{
     margin:0 auto 10px;
 
     display:block;
-
 }
 
 h1{
-
     font-size:20px;
-
     line-height:1.3;
 
     color:var(--primary);
 
     margin-bottom:8px;
-
 }
 
-/* BUTTON TITLE KE NEECHY */
-
 .sticky-btn{
-
     display:flex;
     justify-content:center;
     align-items:center;
@@ -158,10 +139,15 @@ h1{
     0 0 16px rgba(0,255,183,.22);
 
     animation:pulseBtn 1.6s infinite;
+
+    transition:.3s;
+}
+
+.sticky-btn:hover{
+    transform:scale(1.02);
 }
 
 .sticky-btn::before{
-
     content:'';
 
     position:absolute;
@@ -180,13 +166,11 @@ h1{
 }
 
 .desc{
-
     font-size:12px;
 
     line-height:1.5;
 
     color:#dcefff;
-
 }
 
 .highlight{
@@ -194,16 +178,11 @@ h1{
     font-weight:800;
 }
 
-/* FEATURES */
-
 .features{
-
     padding:0 14px 8px;
-
 }
 
 .feature{
-
     display:flex;
     align-items:center;
     gap:10px;
@@ -215,11 +194,9 @@ h1{
     padding:9px;
 
     margin-bottom:7px;
-
 }
 
 .icon{
-
     width:34px;
     height:34px;
 
@@ -234,39 +211,19 @@ h1{
     font-size:16px;
 
     flex-shrink:0;
-
 }
 
 .feature-text{
-
     font-size:11px;
     line-height:1.4;
     font-weight:600;
-
 }
 
 .btn-area{
-
     padding:4px 14px 14px;
-
-}
-
-.timer{
-
-    margin-top:10px;
-
-    text-align:center;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    color:var(--primary);
-
 }
 
 .footer{
-
     margin-top:8px;
 
     text-align:center;
@@ -276,7 +233,6 @@ h1{
     opacity:.85;
 
     line-height:1.5;
-
 }
 
 @keyframes shine{
@@ -296,19 +252,39 @@ h1{
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+{
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod ?
+n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+};
+
+if(!f._fbq)f._fbq=n;
+
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+
+}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '2299427897127494');
 fbq('track', 'PageView');
+
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2299427897127494&ev=PageView&noscript=1"
-/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2299427897127494&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
 
 </head>
@@ -329,21 +305,25 @@ class="logo">
 
 <h1>
 📊 GAUTAM KUMAR JHA ( OFFICIAL )
-
 </h1>
 
-<!-- SINGLE BUTTON TITLE KE NEECHY -->
+<!-- TELEGRAM BUTTON -->
 
-<a href="https://www.t.me/+Su84RVDcsJ9kZmE9"
+<a href="tg://join?invite=Su84RVDcsJ9kZmE9"
 class="sticky-btn"
 onclick="trackJoin()">
+
 🚀 JOIN FREE TELEGRAM CHANNEL
+
 </a>
 
 <div class="desc">
-Learn <span class="highlight">
+Learn
+<span class="highlight">
 Stock Market Basics, Trading Concepts & Market Knowledge
-</span> easily 🚀<br>
+</span>
+easily 🚀
+<br>
 Beginner Friendly Community ✅
 </div>
 
@@ -383,10 +363,6 @@ Easy Telegram Learning Community
 
 <div class="btn-area">
 
-<div class="timer">
-Redirecting in <span id="time">20</span>s...
-</div>
-
 <div class="footer">
 Educational purpose only.<br>
 Not financial or investment advice.
@@ -398,35 +374,20 @@ Not financial or investment advice.
 
 <script>
 
-const targetUrl = "https://www.t.me/+Su84RVDcsJ9kZmE9";
-
 function trackJoin(){
 
-    if(typeof fbq !== 'undefined'){
-        fbq('track','Subscribe');
-    }
+    // Sirf 1 baar Subscribe event fire hoga
+    const alreadyTracked = localStorage.getItem("subscribe_tracked");
 
+    if(!alreadyTracked){
+
+        if(typeof fbq !== 'undefined'){
+            fbq('track', 'Subscribe');
+        }
+
+        localStorage.setItem("subscribe_tracked", "true");
+    }
 }
-
-let seconds = 5;
-
-const timer = setInterval(() => {
-
-    seconds--;
-
-    document.getElementById("time").textContent = seconds;
-
-    if(seconds <= 0){
-
-        clearInterval(timer);
-
-        trackJoin();
-
-        window.location.href = targetUrl;
-
-    }
-
-},1000);
 
 </script>
 
