@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOLIFT | AI Power Digital Marketing Webinar</title>
+    <meta name="description" content="Master Digital Marketing with AI in Just 2 Hours. Join KNOLIFT's Exclusive FREE LIVE Webinar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0a0b10;
+            --accent-blue: #2563eb;
+            --accent-purple: #9333ea;
+            --text-main: #ffffff;
+            --text-dim: #a1a1aa;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+
+        .logo-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 20px rgba(59,130,246,0.3);
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.image-box {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.image-box:hover {
+    transform: translateY(-8px);
+}
+
+.image-box img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+        /* --- Reusable Components --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn-premium {
+            background: var(--gradient);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 32px;
+        }
+
+        .badge {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        /* --- Header --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 11, 16, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-cta {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 160px 0 100px;
+            position: relative;
+            background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 40%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-details {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .detail-item span { color: var(--accent-blue); }
+
+        .hero-image {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800') center/cover;
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* --- Grid Sections --- */
+        section { padding: 100px 0; }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+        }
+
+        .feature-card i {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* --- Urgency --- */
+        .urgency-box {
+            background: linear-gradient(90deg, rgba(59,130,246,0.1), rgba(147,51,234,0.1));
+            border: 2px dashed var(--accent-blue);
+            text-align: center;
+            padding: 40px;
+            border-radius: 24px;
+            margin: 60px 0;
+        }
+
+        .counter {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ef4444;
+            margin-top: 10px;
+        }
+
+        /* --- Registration Form --- */
+        .reg-section {
+            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dim);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: white;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--accent-blue);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .google-form-placeholder {
+            background: #000;
+            border: 1px dashed #444;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            margin-bottom: 30px;
+            border-radius: 12px;
+        }
+
+        /* --- FAQ --- */
+        .faq-item {
+            margin-bottom: 16px;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 24px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 968px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 40px; }
+            .hero-details { justify-content: center; }
+            .hero-image { display: none; }
+            .section-title h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div style="display:flex; align-items:center; gap:12px;">
+    
+    <div class="logo-circle">
+        <img src="https://github.com/nafesslaptop-web/knolift/releases/download/knolift/knolift.enc" alt="KNOLIFT Logo">
+    </div>
+
+    <div class="logo">Knolift Digital Marketing </div>
+
+</div>
+            <a href="#register" class="btn-premium header-cta">Register Free</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="badge">🔥 Limited Time Opportunity</span>
+                    <h1>Master Digital Marketing with AI in Just 2 Hours 🚀</h1>
+                    <p>Join KNOLIFT’s Exclusive FREE LIVE Webinar and Learn AI-Powered Digital Marketing Strategies to Grow Skills, Leads & Income.</p>
+                    
+                    <div class="hero-details">
+                        <div class="detail-item"><span>📅</span> 16 May</div>
+                        <div class="detail-item"><span>⏰</span> 7:00 PM</div>
+                        <div class="detail-item"><span>⏳</span> 2 Hours</div>
+                        <div class="detail-item"><span>💎</span> FREE LIVE</div>
+                    </div>
+
+                    <a href="#register" class="btn-premium" style="animation: pulse 2s infinite;">Reserve My Seat Free</a>
+                </div>
+                <div class="hero-image"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Webinar Images -->
+<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Webinar Preview</h2>
+            <p style="color: var(--text-dim);">
+                See what you'll learn inside this powerful AI marketing webinar.
+            </p>
+        </div>
+
+        <div class="image-gallery">
+
+            <div class="image-box">
+                <img src="https://github.com/nafesslaptop-web/k1/releases/download/k1/kn.1.png" alt="Webinar Image 1">
+            </div>
+
+            <div class="image-box">
+                <img src="https://github.com/nafesslaptop-web/k2/releases/download/k2/k2.png" alt="Webinar Image 2">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Why Join -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Join This Webinar?</h2>
+            </div>
+            <div class="grid-3">
+                <div class="glass-card feature-card">
+                    <i>🤖</i>
+                    <h3>AI Tools Mastery</h3>
+                    <p>Discover the latest AI tools that do 90% of the heavy lifting in marketing.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <i>📱</i>
+                    <h3>Ads Fundamentals</h3>
+                    <p>Master Facebook & Instagram ads from scratch with modern AI strategies.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <i>🎯</i>
+                    <h3>Lead Systems</h3>
+                    <p>Build a consistent system to generate high-quality leads for any business.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <i>💬</i>
+                    <h3>WhatsApp Automation</h3>
+                    <p>Learn how to automate your sales and queries using WhatsApp tools.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <i>💰</i>
+                    <h3>Freelancing Path</h3>
+                    <p>How to land your first high-paying client using your new AI skills.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <i>🚀</i>
+                    <h3>Beginner Friendly</h3>
+                    <p>No prior technical knowledge required. We start from the absolute basics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Learn -->
+    <section style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-title">
+                <h2>What You Will Learn</h2>
+            </div>
+            <div class="grid-3">
+                <div class="glass-card">✓ AI-powered marketing techniques</div>
+                <div class="glass-card">✓ High-converting ad creatives</div>
+                <div class="glass-card">✓ Lead generation funnel basics</div>
+                <div class="glass-card">✓ Automation setup basics</div>
+                <div class="glass-card">✓ Content & growth system</div>
+                <div class="glass-card">✓ Client acquisition strategies</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Benefits -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Students Love KNOLIFT</h2>
+            </div>
+            <div class="grid-3">
+                <div style="text-align: center; padding: 20px;">
+                    <h3 style="color: var(--accent-blue); margin-bottom: 10px;">Beginner Friendly</h3>
+                    <p>Simple language, no jargon.</p>
+                </div>
+                <div style="text-align: center; padding: 20px;">
+                    <h3 style="color: var(--accent-blue); margin-bottom: 10px;">Practical Learning</h3>
+                    <p>Real-world implementations.</p>
+                </div>
+                <div style="text-align: center; padding: 20px;">
+                    <h3 style="color: var(--accent-blue); margin-bottom: 10px;">Expert Guidance</h3>
+                    <p>Directly learn from pros.</p>
+                </div>
+            </div>
+
+            <div class="urgency-box">
+                <h3>Limited Seats Available – Register Before Slots Fill Up</h3>
+                <div class="counter">Only <span id="seat-count">47</span> Seats Left!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="register" class="reg-section">
+        <div class="container">
+            <div class="form-container glass-card">
+                <h2 style="text-align: center; margin-bottom: 30px;">Secure Your Spot</h2>
+
+                </div>
+
+                <form id="regForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your WhatsApp number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn-premium" style="width: 100%; margin-top: 20px;">Register & Join WhatsApp Group</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: var(--text-dim);">
+                        After registration, you’ll be redirected to WhatsApp for webinar updates.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="form-container">
+                <div class="faq-item">
+                    <div class="faq-question">Is this webinar free? <span>+</span></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is it beginner friendly? <span>+</span></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Will recording be available? <span>+</span></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What will I learn? <span>+</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 20px;">KNOLIFT</div>
+            <p>© 2025 KNOLIFT. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form Redirection
+    document.getElementById('regForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const whatsappNumber = "918219088018";
+
+    const name = document.getElementById('name').value;
+    const userPhone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+
+    // Google Form Backend Submit (Hidden)
+    fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSfQpBviK1D8fBSgJkb-TmsFd--fFtghC4hSV5gtWJTu4lpzvw/formResponse",
+        {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body:
+                "entry.237912601=" + encodeURIComponent(name) +
+                "&entry.1879562867=" + encodeURIComponent(userPhone) +
+                "&entry.1706073615=" + encodeURIComponent(email)
+        }
+    );
+
+    // WhatsApp Message
+    const message =
+        `Hi KNOLIFT, I just registered for the AI Marketing Webinar.%0A%0A` +
+        `👤 Name: ${name}%0A` +
+        `📱 Phone: ${userPhone}%0A` +
+        `📧 Email: ${email}`;
+
+    // Redirect to WhatsApp
+    setTimeout(() => {
+        window.location.href =
+            `https://wa.me/${whatsappNumber}?text=${message}`;
+    }, 800);
+});
+    </script>
+</body>
+</html>
